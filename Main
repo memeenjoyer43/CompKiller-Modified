@@ -6537,7 +6537,7 @@ function Compkiller.new(Config : Window)
 					Button.OnDelete = function()
 						WindowArgs.Notify.new({
 							Title = "Configs",
-							Icon = Compkiller:_GetIcon(Config.Icon) and Config.Icon).Image or nil,
+							Icon = Compkiller:_GetIcon(Config.Icon) and  Compkiller:_GetIcon(Config.Icon).Image or nil,
 							Content = "Delete config \""..v.Name.."\""
 						})
 
