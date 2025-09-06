@@ -9054,7 +9054,7 @@ function Compkiller.newNotify()
 			CompLogo.Position = UDim2.new(0, 6, 0, 6)
 			CompLogo.Size = UDim2.new(0, 25, 0, 25)
 			CompLogo.ZIndex = 4
-			Icon.Image = Compkiller:_GetIcon(Notify.Icon)
+			CompLogo.Image = Compkiller:_GetIcon(Notify.Icon)
 
 			Header.Name = Compkiller:_RandomString()
 			Header.Parent = NotifyFrame
