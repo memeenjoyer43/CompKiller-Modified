@@ -4972,9 +4972,9 @@ function Compkiller.new(Config : Window)
 		Icon.Position = UDim2.new(0, 15, 0.5, 0)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
-		Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero,
-		Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero,
-		Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil,
+		Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero
+		Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero
+		Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 		table.insert(Compkiller.Elements.Highlight,{
@@ -5431,9 +5431,9 @@ function Compkiller.new(Config : Window)
 		Icon.Position = UDim2.new(0, 15, 0.5, 0)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
-		Icon.ImageRectOffset = Compkiller:_GetIcon(Configuration.Icon).ImageRectOffset or Vector2.zero,
-		Icon.ImageRectSize = Compkiller:_GetIcon(Configuration.Icon).ImageRectSize or Vector2.zero,
-		Icon.Image = Compkiller:_GetIcon(Configuration.Icon).Image or nil,
+		Icon.ImageRectOffset = Compkiller:_GetIcon(Configuration.Icon).ImageRectOffset or Vector2.zero
+		Icon.ImageRectSize = Compkiller:_GetIcon(Configuration.Icon).ImageRectSize or Vector2.zero
+		Icon.Image = Compkiller:_GetIcon(Configuration.Icon).Image or nil
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 		table.insert(Compkiller.Elements.Highlight,{
@@ -6512,7 +6512,7 @@ function Compkiller.new(Config : Window)
 					Button.OnLoad = function()
 						WindowArgs.Notify.new({
 							Title = "Configs",
-							Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,,
+							Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,
 							Content = "Load config \""..v.Name.."\""
 						})
 
@@ -6718,9 +6718,9 @@ function Compkiller.new(Config : Window)
 			Icon.Position = UDim2.new(0, 15, 0.5, 0)
 			Icon.Size = UDim2.new(0, 22, 0, 22)
 			Icon.ZIndex = 3
-			Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero,
-			Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero,
-			Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil,
+			Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero
+			Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero
+			Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil
 			Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 			table.insert(Compkiller.Elements.Highlight,{
@@ -7540,9 +7540,9 @@ function Compkiller.new(Config : Window)
 				Icon.Size = UDim2.fromOffset(15,15)
 				Icon.SizeConstraint = Enum.SizeConstraint.RelativeYY
 				Icon.ZIndex = 156
-				Icon.ImageRectOffset = Compkiller:_GetIcon(Watermark.Icon).ImageRectOffset or Vector2.zero,
-				Icon.ImageRectSize = Compkiller:_GetIcon(Watermark.Icon).ImageRectSize or Vector2.zero,
-				Icon.Image = Compkiller:_GetIcon(Watermark.Icon).Image or nil,
+				Icon.ImageRectOffset = Compkiller:_GetIcon(Watermark.Icon).ImageRectOffset or Vector2.zero
+				Icon.ImageRectSize = Compkiller:_GetIcon(Watermark.Icon).ImageRectSize or Vector2.zero
+				Icon.Image = Compkiller:_GetIcon(Watermark.Icon).Image or nil
 
 				TextLabel.Parent = WaternarkList
 				TextLabel.BackgroundTransparency = 1.000
@@ -8241,9 +8241,9 @@ function Compkiller.newNotify()
 			CompLogo.Position = UDim2.new(0, 6, 0, 6)
 			CompLogo.Size = UDim2.new(0, 25, 0, 25)
 			CompLogo.ZIndex = 4
-			Icon.ImageRectOffset = Compkiller:_GetIcon(Notify.Icon).ImageRectOffset or Vector2.zero,
-			Icon.ImageRectSize = Compkiller:_GetIcon(Notify.Icon).ImageRectSize or Vector2.zero,
-			Icon.Image = Compkiller:_GetIcon(Notify.Icon).Image or nil,
+			Icon.ImageRectOffset = Compkiller:_GetIcon(Notify.Icon).ImageRectOffset or Vector2.zero
+			Icon.ImageRectSize = Compkiller:_GetIcon(Notify.Icon).ImageRectSize or Vector2.zero
+			Icon.Image = Compkiller:_GetIcon(Notify.Icon).Image or nil
 
 			Header.Name = Compkiller:_RandomString()
 			Header.Parent = NotifyFrame
