@@ -4972,7 +4972,9 @@ function Compkiller.new(Config : Window)
 		Icon.Position = UDim2.new(0, 15, 0.5, 0)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
-		Icon.Image = Compkiller:_GetIcon(TabConfig.Icon);
+		Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero,
+		Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero,
+		Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil,
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 		table.insert(Compkiller.Elements.Highlight,{
@@ -5429,7 +5431,9 @@ function Compkiller.new(Config : Window)
 		Icon.Position = UDim2.new(0, 15, 0.5, 0)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
-		Icon.Image = Compkiller:_GetIcon(Configuration.Icon);
+		Icon.ImageRectOffset = Compkiller:_GetIcon(Configuration.Icon).ImageRectOffset or Vector2.zero,
+		Icon.ImageRectSize = Compkiller:_GetIcon(Configuration.Icon).ImageRectSize or Vector2.zero,
+		Icon.Image = Compkiller:_GetIcon(Configuration.Icon).Image or nil,
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 		table.insert(Compkiller.Elements.Highlight,{
@@ -6472,7 +6476,7 @@ function Compkiller.new(Config : Window)
 				if TextBox.Text:byte() then
 					WindowArgs.Notify.new({
 						Title = "Configs",
-						Icon = Compkiller:_GetIcon(Config.Logo),
+						Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,
 						Content = "Create config \""..TextBox.Text.."\""
 					})
 
@@ -6508,7 +6512,7 @@ function Compkiller.new(Config : Window)
 					Button.OnLoad = function()
 						WindowArgs.Notify.new({
 							Title = "Configs",
-							Icon = Compkiller:_GetIcon(Config.Logo),
+							Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,,
 							Content = "Load config \""..v.Name.."\""
 						})
 
@@ -6518,7 +6522,7 @@ function Compkiller.new(Config : Window)
 					Button.OnSave = function()
 						WindowArgs.Notify.new({
 							Title = "Configs",
-							Icon = Compkiller:_GetIcon(Config.Logo),
+							Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,
 							Content = "Save config \""..v.Name.."\""
 						})
 
@@ -6533,7 +6537,7 @@ function Compkiller.new(Config : Window)
 					Button.OnDelete = function()
 						WindowArgs.Notify.new({
 							Title = "Configs",
-							Icon = Compkiller:_GetIcon(Config.Logo),
+							Icon = Compkiller:_GetIcon(Config.Icon).Image or nil,
 							Content = "Delete config \""..v.Name.."\""
 						})
 
@@ -6714,7 +6718,9 @@ function Compkiller.new(Config : Window)
 			Icon.Position = UDim2.new(0, 15, 0.5, 0)
 			Icon.Size = UDim2.new(0, 22, 0, 22)
 			Icon.ZIndex = 3
-			Icon.Image = Compkiller:_GetIcon(TabConfig.Icon);
+			Icon.ImageRectOffset = Compkiller:_GetIcon(TabConfig.Icon).ImageRectOffset or Vector2.zero,
+			Icon.ImageRectSize = Compkiller:_GetIcon(TabConfig.Icon).ImageRectSize or Vector2.zero,
+			Icon.Image = Compkiller:_GetIcon(TabConfig.Icon).Image or nil,
 			Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 			table.insert(Compkiller.Elements.Highlight,{
@@ -7534,7 +7540,9 @@ function Compkiller.new(Config : Window)
 				Icon.Size = UDim2.fromOffset(15,15)
 				Icon.SizeConstraint = Enum.SizeConstraint.RelativeYY
 				Icon.ZIndex = 156
-				Icon.Image = Compkiller:_GetIcon(Watermark.Icon);
+				Icon.ImageRectOffset = Compkiller:_GetIcon(Watermark.Icon).ImageRectOffset or Vector2.zero,
+				Icon.ImageRectSize = Compkiller:_GetIcon(Watermark.Icon).ImageRectSize or Vector2.zero,
+				Icon.Image = Compkiller:_GetIcon(Watermark.Icon).Image or nil,
 
 				TextLabel.Parent = WaternarkList
 				TextLabel.BackgroundTransparency = 1.000
@@ -7895,7 +7903,7 @@ function Compkiller:ConfigManager(ConfigManager: ConfigManager) : ConfigFunction
 		if Args.EnableNotify then
 			notify.new({
 				Title = "Configs",
-				Icon = Compkiller:_GetIcon('settings'),
+				Icon = Compkiller:_GetIcon('settings').Image or nil,
 				Content = "Create config \""..Config.Name.."\""
 			})
 		end
@@ -7983,7 +7991,7 @@ function Compkiller:ConfigManager(ConfigManager: ConfigManager) : ConfigFunction
 		if Args.EnableNotify then
 			notify.new({
 				Title = "Configs",
-				Icon = Compkiller:_GetIcon('settings'),
+				Icon = Compkiller:_GetIcon('settings').Image or nil,
 				Content = "Delete config \""..ConfigName.."\""
 			})
 		end
@@ -8010,7 +8018,7 @@ function Compkiller:ConfigManager(ConfigManager: ConfigManager) : ConfigFunction
 			if Args.EnableNotify then
 				notify.new({
 					Title = "Configs",
-					Icon = Compkiller:_GetIcon('settings'),
+					Icon = Compkiller:_GetIcon('settings').Image or nil,
 					Content = "Load config \""..ConfigName.."\""
 				})
 			end
@@ -8233,7 +8241,9 @@ function Compkiller.newNotify()
 			CompLogo.Position = UDim2.new(0, 6, 0, 6)
 			CompLogo.Size = UDim2.new(0, 25, 0, 25)
 			CompLogo.ZIndex = 4
-			CompLogo.Image = Compkiller:_GetIcon(Notify.Icon);
+			Icon.ImageRectOffset = Compkiller:_GetIcon(Notify.Icon).ImageRectOffset or Vector2.zero,
+			Icon.ImageRectSize = Compkiller:_GetIcon(Notify.Icon).ImageRectSize or Vector2.zero,
+			Icon.Image = Compkiller:_GetIcon(Notify.Icon).Image or nil,
 
 			Header.Name = Compkiller:_RandomString()
 			Header.Parent = NotifyFrame
