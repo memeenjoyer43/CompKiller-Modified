@@ -92,9 +92,13 @@ return {
 			end
 		end
 
-		Image.ImageRectSize = IconData.ImageRectSize
-		Image.ImageRectOffset = IconData.ImageRectOffset
-		Image.Image = IconData.Image
+		if iconData then
+			Image.ImageRectSize = IconData.ImageRectSize
+			Image.ImageRectOffset = IconData.ImageRectOffset
+			Image.Image = IconData.Image
+		elseif not iconData or string.find(iconName, "rbxassetid://") then
+			Image.Image = IconName
+		end
 
 		return nil :: never
 	end,
