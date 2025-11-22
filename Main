@@ -4974,7 +4974,7 @@ function Compkiller.new(Config : Window)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
-		Compkiller.Lucide:SetIcon(Icon, TabConfig.Icon)
+		Compkiller.Lucide:SetIcon(Icon, tostring(TabConfig.Icon))
 
 		table.insert(Compkiller.Elements.Highlight,{
 			Element = Icon,
@@ -5431,7 +5431,7 @@ function Compkiller.new(Config : Window)
 		Icon.Size = UDim2.new(0, 22, 0, 22)
 		Icon.ZIndex = 3
 		Icon.ImageColor3 = Compkiller.Colors.Highlight
-		Compkiller.Lucide:SetIcon(Icon, Configuration.Icon)
+		Compkiller.Lucide:SetIcon(Icon, tostring(Configuration.Icon))
 
 		table.insert(Compkiller.Elements.Highlight,{
 			Element = Icon,
@@ -6715,7 +6715,7 @@ function Compkiller.new(Config : Window)
 			Icon.Position = UDim2.new(0, 15, 0.5, 0)
 			Icon.Size = UDim2.new(0, 22, 0, 22)
 			Icon.ZIndex = 3
-			Compkiller.Lucide:SetIcon(Icon, TabConfig.Icon)
+			Compkiller.Lucide:SetIcon(Icon, tostring(TabConfig.Icon))
 			Icon.ImageColor3 = Compkiller.Colors.Highlight
 
 			table.insert(Compkiller.Elements.Highlight,{
@@ -7535,7 +7535,7 @@ function Compkiller.new(Config : Window)
 				Icon.Size = UDim2.fromOffset(15,15)
 				Icon.SizeConstraint = Enum.SizeConstraint.RelativeYY
 				Icon.ZIndex = 156
-				Compkiller.Lucide:SetIcon(Icon, Watermark.Icon)
+				Compkiller.Lucide:SetIcon(Icon, tostring(Watermark.Icon))
 
 				TextLabel.Parent = WaternarkList
 				TextLabel.BackgroundTransparency = 1.000
@@ -8234,8 +8234,7 @@ function Compkiller.newNotify()
 			CompLogo.Position = UDim2.new(0, 6, 0, 6)
 			CompLogo.Size = UDim2.new(0, 25, 0, 25)
 			CompLogo.ZIndex = 4
-			CompLogo.Image = Compkiller:_GetIcon(Notify.Icon)
-			Compkiller.Lucide:SetIcon(CompLogo, Notify.Icon)
+			Compkiller.Lucide:SetIcon(CompLogo, tostring(Notify.Icon))
 
 			Header.Name = Compkiller:_RandomString()
 			Header.Parent = NotifyFrame
