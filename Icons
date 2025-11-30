@@ -55,7 +55,7 @@ return {
 			Image.Image = IconData.Image
 		elseif not IconData or string.find(IconName, "rbxassetid://") then
 			Image.Image = IconName
-		elseif typeof(IconData) ~= 'table'
+		elseif typeof(IconData) ~= 'table' then
 			local nearestName = nil
 			local nearestDistance = math.huge
 	
